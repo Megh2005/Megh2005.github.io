@@ -10,6 +10,11 @@
   list-style: none;
 }
 
+*::selection {
+  background: orangered;
+  color: white;
+}
+
 header {
   position: fixed;
   top: 1rem;
@@ -126,7 +131,9 @@ section {
 .info-box h3 {
   font-size: 1.8rem;
   font-weight: 500;
-  opacity: 0.8;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+  background-clip: text;
+  color: transparent;
 }
 
 .info-box h1 {
@@ -138,4 +145,84 @@ section {
   background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
   background-clip: text;
   color: transparent;
+  font-size: 2rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 2px solid black;
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #000;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.socials i:hover {
+  transform: scale(1.1);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.experience-info {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience img {
+  width: 24vw;
+  border-radius: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-card {
+  border: 2px solid black;
+  border-radius: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.grid-card:hover {
+  transform: scale(1.03);
+  background-color: #000;
+  color: white;
 }
